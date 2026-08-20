@@ -4,111 +4,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
+    <title>Meu Blog Tech - Tema Escuro</title>
     <style>
+        /* Variáveis de Cores (Tema Escuro) */
+        :root {
+            --bg-body: #121212;
+            --bg-container: #1e1e1e;
+            --bg-header: #0f253e;
+            --border-color: #2c4d75;
+            --text-primary: #e0e0e0;
+            --text-secondary: #a0a0a0;
+            --accent-color: #4da6ff;
+            --accent-hover: #80c0ff;
+            --bg-button: #2a2a2a;
+            --bg-button-hover: #3a3a3a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-primary);
+            font-family: Arial, sans-serif;
+            padding: 20px 0;
+        }
+
+        /* Cabecalho */
         header {
-            background-color: #183C63;
-            color: #FFFFFF;
+            background-color: var(--bg-header);
+            color: #ffffff;
             text-align: center;
             max-width: 800px;
-            margin: 0 auto;
-            padding: 16px;
+            margin: 0 auto 20px auto;
+            padding: 24px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
         }
 
+        header h1 {
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: #b0c4de;
+        }
+
+        /* Conteudo Principal */
         main {
-            background-color: #FFFFFF;
-            color: #183C63;
+            background-color: var(--bg-container);
             max-width: 800px;
             margin: 0 auto;
             padding: 16px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
         }
 
+        /* Artigos / Posts */
         article {
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
             justify-content: center;
-            border: 1px solid #183C63;
-            margin: 16px;
+            border: 1px solid var(--border-color);
+            background-color: #181818;
+            margin: 16px 0;
             gap: 16px;
-            padding: 16px;
-            flex: 1 1 25%;
+            padding: 20px;
+            border-radius: 8px;
         }
 
         img {
             width: 80px;
             height: 80px;
+            border-radius: 8px;
+        }
+
+        article h2 {
+            margin-bottom: 8px;
+            color: #ffffff;
         }
 
         .artigo-autor {
             font-weight: bold;
+            color: var(--accent-color);
+            margin-bottom: 12px;
+        }
+
+        article p {
+            margin-bottom: 12px;
+            line-height: 1.5;
         }
 
         article a {
-            color: #183C63;
+            color: var(--accent-color);
             font-weight: bold;
             text-decoration: underline;
         }
 
         article a:hover {
-            color: #0d233a;
+            color: var(--accent-hover);
+        }
+
+        /* Botoes de Interacao */
+        .botoes-container {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 8px;
+        }
+
+        button {
+            background-color: var(--bg-button);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+
+        button:hover {
+            background-color: var(--bg-button-hover);
+        }
+
+        button:active {
+            transform: scale(0.95);
         }
     </style>
 </head>
 
 <body>
+
     <header>
-        <h1>Meu blog tech</h1>
+        <h1>Meu Blog Tech</h1>
         <p>Vou compartilhar conhecimentos sobre tecnologia e programação</p>
     </header>
+
     <main>
+        <!-- Post 1 -->
         <article>
             <img src="imagem.jpg"
-                alt="Logotipo conceitual de tecnologia e educação: um livro aberto de onde emerge um cérebro digital brilhante, cercado por ícones de Wi-Fi, circuitos e lâmpada de ideia. Cores em tons de azul e branco.">
+                alt="Logotipo conceitual de tecnologia e educação: um livro aberto de onde emerge um cérebro digital brilhante.">
             <div>
                 <h2>Meu primeiro post</h2>
                 <p class="artigo-autor">Por: Alunos do integral</p>
-                <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de
-                    tecnologia.</p>
-                <button>❤️ <span>0</span></button>
-                <button>👍 <span>0</span></button>
+                <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de tecnologia.</p>
+                <div class="botoes-container">
+                    <button>❤️ <span>0</span></button>
+                    <button>👍 <span>0</span></button>
+                </div>
             </div>
         </article>
 
+        <!-- Post 2 -->
         <article>
             <img src="imagem1.jpg"
-                alt="Logotipo conceitual de tecnologia e educação: um livro aberto de onde emerge um cérebro digital brilhante, cercado por ícones de Wi-Fi, circuitos e lâmpada de ideia. Cores em tons de azul e branco.">
+                alt="Logotipo conceitual de tecnologia e educação: um livro aberto de onde emerge um cérebro digital brilhante.">
             <div>
                 <h2>Meu segundo post</h2>
                 <p class="artigo-autor">Por: Alunos do integral</p>
                 <p>Entender a lógica de programação é o primeiro passo para criar projetos incríveis no mundo dos softwares!</p>
-                <button>❤️ <span>0</span></button>
-                <button>👍 <span>0</span></button>
+                <div class="botoes-container">
+                    <button>❤️ <span>0</span></button>
+                    <button>👍 <span>0</span></button>
+                </div>
             </div>
         </article>
 
+        <!-- Post 3 -->
         <article>
             <img src="imagem2.jpg"
-                alt="Logotipo conceitual de tecnologia e educação: um livro aberto de onde emerge um cérebro digital brilhante, cercado por ícones de Wi-Fi, circuitos e lâmpada de ideia. Cores em tons de azul e branco.">
+                alt="Logotipo conceitual de tecnologia e educação: um livro aberto de onde emerge um cérebro digital brilhante.">
             <div>
                 <h2>Meu terceiro post</h2>
                 <p class="artigo-autor">Por: Alunos do integral</p>
                 <p>O HTML dá a estrutura, o CSS deixa estiloso e o JavaScript cria a interatividade da página.</p>
-                <button>❤️ <span>0</span></button>
-                <button>👍 <span>0</span></button>
+                <div class="botoes-container">
+                    <button>❤️ <span>0</span></button>
+                    <button>👍 <span>0</span></button>
+                </div>
             </div>
         </article>
 
+        <!-- Post 4 (Com link) -->
         <article>
             <img src="imagem3.jpg"
-                alt="Logotipo conceitual de tecnologia e educação: um livro aberto de onde emerge um cérebro digital brilhante, cercado por ícones de Wi-Fi, circuitos e lâmpada de ideia. Cores em tons de azul e branco.">
+                alt="Logotipo conceitual de tecnologia e educação: um livro aberto de onde emerge um cérebro digital brilhante.">
             <div>
                 <h2>Meu quarto post</h2>
                 <p class="artigo-autor">Por: Alunos do integral</p>
                 <p>Quer praticar programação web gratuitamente? Visite o site <a href="https://www.w3schools.com" target="_blank">W3Schools</a> para aprender com tutoriais práticos.</p>
-                <button>❤️ <span>0</span></button>
-                <button>👍 <span>0</span></button>
+                <div class="botoes-container">
+                    <button>❤️ <span>0</span></button>
+                    <button>👍 <span>0</span></button>
+                </div>
             </div>
         </article>
     </main>
@@ -119,10 +214,10 @@
         botoes.forEach(function (botao) {
             let curtiu = false;
             botao.addEventListener("click", botaoClicado);
+
             function botaoClicado() {
-                console.log("fui clicado");
                 let texto = botao.querySelector("span");
-                if (curtiu === false) {
+                if (!curtiu) {
                     texto.textContent++;
                     curtiu = true;
                 } else {
@@ -130,8 +225,9 @@
                     curtiu = false;
                 }
             }
-        })
+        });
     </script>
+
 </body>
 
 </html>
